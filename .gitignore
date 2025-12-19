@@ -1,0 +1,4 @@
+data/
+models_*/
+.env
+.cursorignore
