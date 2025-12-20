@@ -2,5 +2,3 @@ data/
 models_*/
 .env
 .cursorignore
-old_code/
-create_*.py
