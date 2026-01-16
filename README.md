@@ -1,5 +1,9 @@
 # Quechua Morphological Segmentation
 
+**🌐 Language / Idioma:** English | [Español](README.es.md)
+
+---
+
 > **Supervised Morphological Segmentation for Southern Quechua: Priors, Filters, and LLM Augmentation**
 
 A comprehensive toolkit for morphological segmentation of Southern Quechua, featuring neural architectures augmented with linguistically-informed priors.
@@ -124,7 +128,7 @@ filtered = filter.filter("rikuchkani", segments)
 
 ### Test Data (Public)
 - **913 unique words** held out before training
-- will be soon provided
+- Released with this repository
 
 ### Corpus Statistics
 
@@ -221,7 +225,7 @@ The pipeline respects data governance by not exposing private training data to e
 
 ## ఏ License
 
-Code is released under MIT License. The 913-word test set will be released for research purposes.
+Code is released under MIT License. The 913-word test set is released for research purposes.
 
 ## ఐ Acknowledgments
 
