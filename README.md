@@ -4,7 +4,7 @@
 
 A comprehensive toolkit for morphological segmentation of Southern Quechua, featuring neural architectures augmented with linguistically-informed priors.
 
-## 📊 Results Summary
+## అ Results Summary
 
 ### Test Set Results (913 words)
 
@@ -43,7 +43,7 @@ A comprehensive toolkit for morphological segmentation of Southern Quechua, feat
 
 6. **GPT-4o > GPT-5 for this task**: Instruction-following fidelity matters more than raw capability for narrow morphological tasks.
 
-## 🏗️ Architecture
+## ఆ Architecture
 
 ```
 Raw Word → Grapheme Tokenizer → BiLSTM Encoder → Boundary Logits → Rejection Filter → Segmented Word
@@ -55,7 +55,7 @@ The system combines:
 - **Soft priors** (HMM or Decision Tree) during training via logit-level fusion
 - **Hard constraints** (suffix rejection filter) at inference
 
-## 📁 Repository Structure
+## ఇ Repository Structure
 
 ```
 quechua-segmentation/
@@ -79,7 +79,7 @@ quechua-segmentation/
 └── README.md
 ```
 
-## 🚀 Quick Start
+## ఈ Quick Start
 
 ### Installation
 
@@ -121,7 +121,7 @@ filter = SuffixRejectionFilter(suffix_vocabulary)
 filtered = filter.filter("rikuchkani", segments)
 ```
 
-## 📚 Data
+## ఉ Data
 
 ### Training Data (Private)
 - **6,896 unique words** from interview transcriptions with ~70 adult Quechua speakers
@@ -139,7 +139,7 @@ filtered = filter.filter("rikuchkani", segments)
 - Heaps' law: β ≈ 0.90 (R² = 0.98)
 - Strong correlation between word length and morpheme count (r = 0.79)
 
-## 🔧 Models
+## ఊ Models
 
 ### BiLSTM Boundary Tagger
 Character/grapheme-level BiLSTM with per-position boundary prediction.
@@ -179,7 +179,7 @@ valid = filter.validate(["riku", "chka", "ni"])  # True
 valid = filter.validate(["ri", "ku", "xyz"])     # False
 ```
 
-## 🔬 LLM Augmentation
+## ఋ LLM Augmentation
 
 We use GPT-4o to generate synthetic training examples:
 
@@ -190,7 +190,7 @@ We use GPT-4o to generate synthetic training examples:
 
 The pipeline respects data governance by not exposing private training data to external APIs.
 
-## 📖 Citation
+## ౠ Citation
 
 ```bibtex
 @inproceedings{anonymous2026quechua,
@@ -202,7 +202,7 @@ The pipeline respects data governance by not exposing private training data to e
 }
 ```
 
-## 📜 Ethics & Data Governance
+## ఎ Ethics & Data Governance
 
 - Training data collected under IRB approval with informed consent
 - Community elders served as annotators with fair compensation at US rates
@@ -210,10 +210,10 @@ The pipeline respects data governance by not exposing private training data to e
 - Private data is not exposed to external APIs
 - Public release prioritizes language maintenance and education applications
 
-## 📄 License
+## ఏ License
 
 Code is released under MIT License. The 913-word test set is released for research purposes.
 
-## 🙏 Acknowledgments
+## ఐ Acknowledgments
 
 We thank the Quechua-speaking communities who contributed linguistic data and expertise, and the community elder consultants who provided annotations.
