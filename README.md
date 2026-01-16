@@ -66,14 +66,7 @@ quechua-segmentation/
 │   ├── evaluation.py        # Metrics & evaluation utilities
 │   └── training.py          # Training loops & checkpoints
 ├── notebooks/               # Original Jupyter notebooks
-│   ├── analysis.ipynb       # Corpus statistics (Zipf, Heaps)
-│   ├── segmenter.ipynb      # BiLSTM (Grapheme) baseline
-│   ├── segmenter-old.ipynb  # BiLSTM (Character) baseline
-│   ├── segmenter-morfessor.ipynb  # BiLSTM + Morfessor
-│   ├── stats.ipynb          # BiLSTM-CRF model
-│   ├── transmorpher.ipynb   # Transformer Seq2Seq
-│   ├── DT-LSTM.ipynb        # BiLSTM + Decision Tree Prior
-│   └── Markov-LSTM.ipynb    # BiLSTM + HMM Prior + LLM Aug
+├── images/                  # Figures and visualizations
 ├── data/                    # Data files (see Data section)
 ├── models/                  # Trained model checkpoints
 └── README.md
@@ -134,10 +127,26 @@ filtered = filter.filter("rikuchkani", segments)
 - Released with this repository
 
 ### Corpus Statistics
-- **2.1M tokens**, 206K types from public Quechua sources
-- Zipf exponent: s ≈ 1.45
-- Heaps' law: β ≈ 0.90 (R² = 0.98)
-- Strong correlation between word length and morpheme count (r = 0.79)
+
+Our training data exhibits strong correlation between word length and morpheme count (Pearson r = 0.79, p < 0.001):
+
+![Word Length vs Morpheme Count](images/heatmap.png)
+
+*Heatmap showing the relationship between word length (characters) and number of morphemes. The diagonal pattern reflects Quechua's bisyllabic root constraint and regular suffixation.*
+
+![Linear Regression](images/regression.png)
+
+*Linear relationship: morphemes ≈ 0.28 × length + 0.32 (R² = 0.63)*
+
+For the public crawl corpus (~2.1M tokens, 206K types):
+
+![Heaps' Law](images/heaps.png)
+
+*Vocabulary growth follows Heaps' law with β = 0.90 (R² = 0.98), indicating continued productivity.*
+
+![Zipf-Mandelbrot](images/zipf.png)
+
+*Word frequency distribution with Zipf-Mandelbrot fit (s = 1.06, q = 6.0).*
 
 ## ఊ Models
 
